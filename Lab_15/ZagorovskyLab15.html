@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабороторна робота 15</title>
+</head>
+<body>
+    <h1>Виконання завдань у JavaScript</h1>
+    <button onclick="runTasks()">Запустити всі завдання</button>
+
+    <script>
+        function runTasks() {
+            console.log("Прості числа від 0 до 100:");
+            function isPrime(num) {
+                if (num < 2) return false;
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) return false;
+                }
+                return true;
+            }
+
+            let num = 0;
+            while (num <= 100) {
+                if (isPrime(num)) console.log(num);
+                num++;
+            }
+
+            console.log("\nЧисла від 0 до 10 із зазначенням парності:");
+            let i = 0;
+            do {
+                if (i === 0) {
+                    console.log(`${i} – це нуль`);
+                } else if (i % 2 === 0) {
+                    console.log(`${i} – парне число`);
+                } else {
+                    console.log(`${i} – непарне число`);
+                }
+                i++;
+            } while (i <= 10);
+
+            console.log("\nДілення числа 10000 на 2:");
+            let numb = 10000;
+            let counter = 0;
+
+            while (numb >= 50) {
+                numb /= 2;
+                counter++;
+            }
+
+            console.log(`Результат: ${numb}`);
+            console.log(`Кількість ітерацій: ${counter}`);
+
+            let month = parseInt(prompt("Введіть номер місяця (від 1 до 12):"));
+            let season, monthName;
+
+            switch (month) {
+                case 1: monthName = "Січень"; season = "Зима"; break;
+                case 2: monthName = "Лютий"; season = "Зима"; break;
+                case 3: monthName = "Березень"; season = "Весна"; break;
+                case 4: monthName = "Квітень"; season = "Весна"; break;
+                case 5: monthName = "Травень"; season = "Весна"; break;
+                case 6: monthName = "Червень"; season = "Літо"; break;
+                case 7: monthName = "Липень"; season = "Літо"; break;
+                case 8: monthName = "Серпень"; season = "Літо"; break;
+                case 9: monthName = "Вересень"; season = "Осінь"; break;
+                case 10: monthName = "Жовтень"; season = "Осінь"; break;
+                case 11: monthName = "Листопад"; season = "Осінь"; break;
+                case 12: monthName = "Грудень"; season = "Зима"; break;
+                default: alert("Невірний номер місяця!"); return;
+            }
+
+            if (monthName && season) {
+                alert(`Місяць: ${monthName}, Пора року: ${season}`);
+            }
+
+            let tc = parseFloat(prompt("Введіть температуру в градусах Цельсія:"));
+            let tf = (9 / 5) * tc + 32;
+            alert(`Температура в градусах Фаренгейта: ${tf.toFixed(2)}`);
+
+            let dayNumber = parseInt(prompt("Введіть число від 1 до 7:"));
+            let dayName;
+
+            switch (dayNumber) {
+                case 1: dayName = "Понеділок"; break;
+                case 2: dayName = "Вівторок"; break;
+                case 3: dayName = "Середа"; break;
+                case 4: dayName = "Четвер"; break;
+                case 5: dayName = "П’ятниця"; break;
+                case 6: dayName = "Субота"; break;
+                case 7: dayName = "Неділя"; break;
+                default: alert("Невірне число!"); return;
+            }
+
+            if (dayName) {
+                alert(`Це ${dayName}.`);
+            }
+        }
+    </script>
+</body>
+</html>
