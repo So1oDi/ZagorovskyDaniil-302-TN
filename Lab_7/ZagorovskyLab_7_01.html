@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ZagorovskyLab07-1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #4e4e4e;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus,
+        input[type="file"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group input[type="submit"] {
+            width: 48%;
+            margin-right: 4%;
+        }
+        .form-group input[type="reset"] {
+            width: 48%;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            margin-left: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="response.html" method="get">
+        <h2>Форма для завдання</h2>
+        
+        <div class="form-group">
+            <label for="name">Ваше ім'я:</label>
+            <input id="name" name="name" type="text" maxlength="40" placeholder="Введіть ваше ім'я">
+        </div>
+        
+        <div class="form-group radio-group">
+            <label>Ваша стать:</label>
+            <label><input type="radio" name="pol" value="male"> Чоловіча</label>
+            <label><input type="radio" name="pol" value="female"> Жіноча</label>
+            <label><input type="radio" name="pol" value="other"> Інша</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="curs">На якому курсі Ви навчаєтесь?</label>
+            <select id="curs" name="curs">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </div>
+        
+        <div class="form-group checkbox-group">
+            <label>Які дисципліни ви вивчаєте на курсі?</label>
+            <label><input type="checkbox" name="web" value="yes" checked> WEB-програмування</label>
+            <label><input type="checkbox" name="database" value="yes"> Бази даних</label>
+            <label><input type="checkbox" name="intelligence" value="yes"> Методи та системи штучного інтелекту</label>
+            <label><input type="checkbox" name="theory" value="yes"> Теорія прийняття рішень</label>
+        </div>
+        
+        <div class="form-group">
+            <label for="about">Напишіть декілька слів про себе:</label>
+            <textarea id="about" name="about" rows="6" placeholder="Розкажіть трохи про себе..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="friend">Завантажте файл:</label>
+            <input type="file" id="friend" name="friend" accept=".txt,.doc,.docx,.pdf">
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+        </div>
+    </form>
+
+</body>
+</html>

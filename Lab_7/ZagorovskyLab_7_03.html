@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZagarovskyLab07-3</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            vertical-align: middle;
+        }
+
+        td:first-child {
+            text-align: left;
+            width: 200px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #d32f2f;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #388e3c;
+        }
+
+        .interest-inputs input {
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            td:first-child {
+                width: 100%;
+                text-align: left;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Анкета</h2>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>1. Прізвище</td>
+                <td><input type="text" id="surname" name="surname" required></td>
+            </tr>
+            <tr>
+                <td>2. Ім'я, по батькові</td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td>3. Число і рік народження</td>
+                <td><input type="date" id="birth" name="birth" required></td>
+            </tr>
+            <tr>
+                <td>4. Домашня адреса</td>
+                <td><input type="text" id="address" name="address" required></td>
+            </tr>
+            <tr>
+                <td>5. Місце навчання (роботи)</td>
+                <td><input type="text" id="place" name="place" required></td>
+            </tr>
+            <tr>
+                <td>6. Домашній (робочий) телефон</td>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>7. E-mail</td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>8. Область наукових інтересів</td>
+                <td class="interest-inputs">
+                    <input type="text" id="interest1" name="interest1" placeholder="1. Науковий інтерес" required><br>
+                    <input type="text" id="interest2" name="interest2" placeholder="2. Науковий інтерес" required><br>
+                    <input type="text" id="interest3" name="interest3" placeholder="3. Науковий інтерес" required><br>
+                    <input type="text" id="interest4" name="interest4" placeholder="4. Науковий інтерес" required><br>
+                    <input type="text" id="interest5" name="interest5" placeholder="5. Науковий інтерес" required><br>
+                    <input type="text" id="interest6" name="interest6" placeholder="6. Науковий інтерес" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="reset">Відмінити введення</button>
+                    <button type="submit">Надіслати дані та перейти до 2 етапу реєстрації</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

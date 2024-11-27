@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>ZagorovskyLab04-3</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            margin: 0;
+            font-family: Verdana, sans-serif;
+        }
+        .marquee-container {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .marquee-container:nth-child(1) { background-color: #ffdd99; }
+        .marquee-container:nth-child(2) { background-color: #99ffcc; }
+        .marquee-container:nth-child(3) { background-color: #ff9999; }
+        .marquee-container:nth-child(4) { background-color: #cc99ff; }
+        .marquee-container:nth-child(5) { background-color: #99ccff; }
+
+        .marquee-text, .marquee-image {
+            position: absolute;
+            white-space: nowrap;
+        }
+
+        .bounce {
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-50%); }
+        }
+
+        .bottom-to-top {
+            animation: bottomToTop 6s linear infinite;
+        }
+        @keyframes bottomToTop {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+
+        .top-to-bottom-stop {
+            animation: topToBottomStop 4s linear forwards;
+        }
+        @keyframes topToBottomStop {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .delay-1 {
+            animation: delayedMove 6s linear infinite 1s; 
+        }
+        .delay-2 {
+            animation: delayedMove 6s linear infinite 3s; 
+        }
+        @keyframes delayedMove {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-text bounce">Текст коливається у вертикальному напрямку</div>
+    </div>
+
+    <div class="marquee-container">
+        <img class="marquee-image bottom-to-top" src="Backgrnd1.gif" alt="Рисунок 1" height="100">
+    </div>
+
+    <div class="marquee-container">
+        <img class="marquee-image top-to-bottom-stop" src="3.jpg" alt="Рисунок 2" height="100">
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-text delay-1">Рух тексту із запізненням 1 секунда</div>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-text delay-2">Рух тексту із запізненням 3 секунди</div>
+    </div>
+</body>
+</html>

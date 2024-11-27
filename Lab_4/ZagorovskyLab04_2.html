@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Zagorovsky04-2</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            margin: 0;
+            font-family: Verdana, sans-serif;
+        }
+        .marquee-container {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .marquee-container:nth-child(1) { background-color: #99ff00; }
+        .marquee-container:nth-child(2) { background-color: #ffcccb; }
+        .marquee-container:nth-child(3) { background-color: #add8e6; }
+        .marquee-container:nth-child(4) { background-color: #d3ffce; }
+        .marquee-container:nth-child(5) { background-color: #ffa07a; }
+
+        .marquee-text {
+            color: #8b008b;
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+            position: absolute;
+        }
+        .bounce {
+            animation: bounce 3s ease-in-out infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateX(0); }
+            to { transform: translateX(80%); }
+        }
+
+        .right-to-left {
+            animation: rightToLeft 10s linear infinite;
+        }
+        @keyframes rightToLeft {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .left-to-right-stop {
+            animation: leftToRightStop 5s linear forwards;
+        }
+        @keyframes leftToRightStop {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .delay-1 {
+            animation: delayedRightToLeft 10s linear infinite 1s;
+        }
+        .delay-2 {
+            animation: delayedRightToLeft 10s linear infinite 3s;
+        }
+        @keyframes delayedRightToLeft {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-text bounce">Коливання з боку в бік</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text right-to-left">Рух справа наліво, з повторенням</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text left-to-right-stop">Рух зліва направо, зупинка</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text delay-1">Рух із запізненням 1 секунда</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text delay-2">Рух із запізненням 3 секунди</div>
+    </div>
+</body>
+</html>

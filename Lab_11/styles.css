@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #9B111E;
+    font-style: normal;
+}
+
+p {
+    font-style: italic;
+    font-size: 16px; 
+    line-height: 1.6;
+    text-align: justify;
+    margin-left: 2%; 
+    margin-right: 2%; 
+    text-indent: 2em; 
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF5733;
+}
+
+a:visited {
+    color: #8A2BE2;
+}
+
+a:active {
+    color: #FF6347;
+}

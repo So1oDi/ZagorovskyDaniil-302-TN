@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZagorovskyLab07-4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 48%;
+            margin-right: 4%;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .payment-methods {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .payment-methods input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Форма замовлення товару</h2>
+
+<form action="#" method="post">
+    <div class="form-group">
+        <label for="bank_account">Номер банківського рахунку:</label>
+        <input type="text" id="bank_account" name="bank_account" required placeholder="Введіть номер рахунку">
+    </div>
+
+    <div class="form-group">
+        <label for="personal_id">Особистий номер користувача:</label>
+        <input type="text" id="personal_id" name="personal_id" required placeholder="Введіть особистий номер">
+    </div>
+
+    <div class="form-group">
+        <label for="products">Оберіть товар(и):</label>
+        <select id="products" name="products[]" multiple required>
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+            <option value="product4">Товар 4</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Ваші коментарі:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Введіть ваші коментарі"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Вибір способу оплати:</label>
+        <div class="payment-methods">
+            <label><input type="radio" name="payment_method" value="cash" required> Готівковий розрахунок</label>
+            <label><input type="radio" name="payment_method" value="bank_transfer" required> Безготівковий розрахунок</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Яку додаткову інформацію ви бажаєте одержати?</label>
+        <label><input type="checkbox" name="additional_info" value="balance"> Дані про залишки на рахунку</label><br>
+        <label><input type="checkbox" name="additional_info" value="payments"> Список останніх виплат по рахунку</label>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Надіслати замовлення">
+        <input type="reset" value="Скинути">
+    </div>
+</form>
+
+</body>
+</html>

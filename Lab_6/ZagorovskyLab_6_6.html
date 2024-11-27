@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Про моїх друзів">
+    <meta name="keywords" content="друзі, одногрупники, фото, спливаючі заголовки">
+    <title>Про моїх друзів</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0066cc;
+        }
+        h2 {
+            color: #004d99;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        .friend-image {
+            width: 900px;
+            height: 350px;
+            border-radius: 10px;
+            margin: 15px;
+        }
+        .container {
+            text-align: center;
+        }
+        .card {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мої друзі</h1>
+    <p>На цій сторінці я хочу познайомити вас з моїми друзями-одногрупниками.</p>
+    
+    <map name="friendsMap">
+        <area shape="circle" coords="59,105,130,170" href="#friend1" title="Даниил">
+        <area shape="circle" coords="115,75,175,122" href="#friend2" title="Костянтин">
+        <area shape="circle" coords="300,50,250,90" href="#friend3" title="Максим">
+        <area shape="circle" coords="1025,203,1248,432" href="#friend4" title="Кирило">
+    </map>
+
+    <div class="container">
+        <img src="Одногрупники.jpg" alt="Олексій" class="friend-image" usemap="#friendsMap">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мої друзі - всі права захищено</p>
+    </footer>
+
+</body>
+</html>

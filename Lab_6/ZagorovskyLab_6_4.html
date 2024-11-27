@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерактивне зображення</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333333; 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+        }
+        h1 {
+            color: #00509e;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Інтерактивне зображення з посиланнями</h1>
+    <p>Натисніть на фігури, щоб перейти на відповідну сторінку:</p>
+
+    <map name="shapeMap">
+        <area shape="rect" coords="6,9,242,76" href="ZagorovskyLab01_9.html" title="Домашня сторінка">
+        <area shape="circle" coords="113,94,318,168" href="ZagorovskyLab_5_03.html" title="Мої гіперпосилання">
+        <area shape="poly" coords="10,88,115,181" href="ZagorovskyLab_6_3.html" title="Моя Батьківщина">
+    </map>
+    <img src="Фігури.png" width="400" height="300" alt="Інтерактивне зображення" usemap="#shapeMap">
+</body>
+</html>
